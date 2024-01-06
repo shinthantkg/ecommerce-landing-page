@@ -56,7 +56,7 @@ export default function Cart() {
                   <img className="cart-item__thumbnail" src={productThumbnail} alt="Fall Limited Edition Sneakers" />
                   <div className="cart-item__text-info flex flex-fd-c">
                     <figcaption className="cart-item__name">Fall Limited Edition Sneakers</figcaption>
-                    <span className="cart-item__amount">{`$${itemPrice}.00 x`} <span className="cart-item__total-price">${itemPrice * items}.00</span></span>
+                    <span className="cart-item__amount">{`$${itemPrice}.00 x ${items}`} <span className="cart-item__total-price">${itemPrice * items}.00</span></span>
                   </div>
                 </figure>
                 <button

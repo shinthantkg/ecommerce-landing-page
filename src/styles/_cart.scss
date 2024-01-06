@@ -1,0 +1,104 @@
+@import "variables";
+
+.cart {
+  position: absolute;
+  right: 5.625em;
+  top: 6.25em;
+
+  &__label,
+  &__items {
+    background-color: $white;
+    font-family: $font;
+    width: 22.5em;
+    height: 11.875em;
+
+    @media (max-width: 62.4375em) {
+      width: 95vw;
+    }
+  }
+
+  &__label {
+    border-radius: 0.625em 0.625em 0 0;
+    box-shadow: 0 0 0.8125em 0 rgba(0,0,0,0.3);
+    color: $black;
+    height: 3.75em;
+    padding: 1.25em;
+
+    &-title {
+      font-size: $fs-reg;
+      margin: 0;
+    }
+  }
+
+  &__items {
+    border-radius: 0 0 0.625em 0.625em;
+    box-shadow: 0 0.3125em 0.8125em 0 rgba(0,0,0,0.3);
+    padding: 1.25em;
+  }
+
+  &-item {
+    &__info {
+      margin: 0 0 0.9375em 0;
+    }
+
+    &__thumbnail {
+      border-radius: 5px;
+      width: 3.125em;
+      height: 3.125em;
+    }
+
+    &__text-info {
+      margin-left: 0.9375em;
+    }
+
+    &__name {
+      color: $dark-grayish-blue;
+      margin-bottom: 0.3125em;
+    }
+
+    &__amount {
+      color: $dark-grayish-blue;
+    }
+
+    &__total-price {
+      color: $dark-blue;
+      font-weight: $fw-bold;
+    }
+
+    &__delete-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 1.25em;
+      padding: 0;
+    }
+
+    @media (max-width: 62.4375em) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__checkout-btn {
+    background-color: $orange;
+    border: none;
+    border-radius: 0.625em;
+    color: $white;
+    cursor: pointer;
+    font-family: $font;
+    font-size: $fs-reg;
+    font-weight: $fw-bold;
+    padding: 1.25em 7.5em;
+
+    @media (max-width: 62.4375em) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 62.4375em) {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: 6.25em;
+  }
+}

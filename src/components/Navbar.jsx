@@ -12,51 +12,58 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = useState(null);
 
   const navLinks = [
-    {id: 1, name: "Collections"},
-    {id: 2, name: "Men"},
-    {id: 3, name: "Women"},
-    {id: 4, name: "About"},
-    {id: 5, name: "Contact"},
+    { id: 1, name: "Collections" },
+    { id: 2, name: "Men" },
+    { id: 3, name: "Women" },
+    { id: 4, name: "About" },
+    { id: 5, name: "Contact" },
   ];
 
   return (
-      <>
-        <header className="header">
-          <nav className="navbar flex flex-jc-sb">
-            <div className="flex flex-ai-c">
-              <button onClick={() => setNavToggle(true)} className="mobile-nav__toggle-btn mobile-nav__btn--open hidden--desktop">
-                <img src={menuIcon} alt="Menu"/>
-              </button>
-              <a href="/">
-                <img src={logo} alt="Sneakers Logo"/>
-              </a>
-              <ul className="navbar__list hidden--mobile">
-                {navLinks.map((navLink) => (
-                    <li className={`navbar__item ${navLink.id === activeLink ? "navbar__item--active" : ""}`}
-                        key={navLink.id} onClick={() => setActiveLink(navLink.id)}
-                        aria-current={navLink.id === activeLink}><a>{navLink.name}</a></li>
-                ))}
-              </ul>
-            </div>
+    <header className="header" role="banner">
+      <nav className="navbar flex flex-jc-sb" role="navigation">
+        <div className="flex flex-ai-c">
+          <button
+            onClick={() => setNavToggle(true)}
+            className="mobile-nav__toggle-btn mobile-nav__btn--open hidden--desktop"
+            aria-label="Open Menu"
+          >
+            <img src={menuIcon} alt="Menu" />
+          </button>
+          <a href="/">
+            <img src={logo} alt="Sneakers Logo" />
+          </a>
+          <ul className="navbar__list hidden--mobile">
+            {navLinks.map((navLink) => (
+              <li
+                className={`navbar__item ${navLink.id === activeLink && "navbar__item--active"}`}
+                key={navLink.id}
+                onClick={() => setActiveLink(navLink.id)}
+                aria-current={navLink.id === activeLink}
+                tabIndex="0"
+              >
+                <a>{navLink.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-            <div className="flex flex-ai-c">
-              <div>
-                <CartContextProvider>
-                  <CartContextConsumer>
-                    {() => {
-                      return <Cart/>;
-                    }}
-                  </CartContextConsumer>
-                </CartContextProvider>
-              </div>
+        <div className="flex flex-ai-c">
+          <div>
+            <CartContextProvider>
+              <CartContextConsumer>
+                {() => {
+                  return <Cart />;
+                }}
+              </CartContextConsumer>
+            </CartContextProvider>
+          </div>
 
-              <img className="navbar__profile" src={avatar} alt="Profile Picture"/>
-            </div>
-          </nav>
+          <img className="navbar__profile" src={avatar} alt="Profile Picture" />
+        </div>
+      </nav>
 
-          <hr className="header__divider hidden--mobile"/>
-        </header>
-      </>
-
+      <hr className="header__divider hidden--mobile" />
+    </header>
   );
 }

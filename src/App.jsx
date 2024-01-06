@@ -4,19 +4,17 @@ import MobileNav from "./components/MobileNav.jsx";
 
 export default function App() {
     return (
-        <>
-            <NavContextProvider>
-                <NavContextConsumer>
-                    {() => {
-                        return (
-                            <>
-                                <Navbar />
-                                <MobileNav />
-                            </>
-                        )
-                    }}
-                </NavContextConsumer>
-            </NavContextProvider>
-        </>
+        <NavContextProvider>
+            <NavContextConsumer>
+                {() => {
+                    return (
+                        <>
+                            <Navbar />
+                            <MobileNav />
+                        </>
+                    )
+                }}
+            </NavContextConsumer>
+        </NavContextProvider>
     );
 }

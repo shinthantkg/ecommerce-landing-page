@@ -20,17 +20,17 @@ This is a solution to the [E-commerce product page coding challenge](https://www
 
 ### The challenge
 
-This frontendmentor.io challenge consists of an example **product page for an e-commerce web application**.  
+* This frontendmentor.io challenge consists of an example **product page for an e-commerce web application**.  
 
-There is a navigation bar with a working cart which **users are able to add or remove items to**. 
+* There is a navigation bar with a working cart which **users are able to add or remove items to**. 
 
-In the center of the page, there is the **product display** which consists of different images of the product which **users can toggle through using the thumbnails below the current image or their left and right arrow keys**. 
+* In the center of the page, there is the **product display** which consists of different images of the product which **users can toggle through using the thumbnails below the current image or their left and right arrow keys**. 
 
-When the current image gets clicked, it opens the **lightbox viewing mode**. 
+* When the current image gets clicked, it opens the **lightbox viewing mode**. 
 
-There are two functional buttons used to **add and remove items to the cart**. 
+* There are two functional buttons used to **add and remove items to the cart**. 
 
-As for mobile, there is a sidebar which can be toggled.
+* As for mobile, there is a sidebar which can be toggled.
 
 ### Screenshots
 

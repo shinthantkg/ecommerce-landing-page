@@ -34,10 +34,12 @@ export default function ProductViewer() {
   function handleArrowKeyPress(event) {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       event.key === "ArrowLeft" ? slideLeft() : slideRight();
+    } else if (event.key === "Escape") {
+      isInLightBox ? setIsInLightBox(prevValue => !prevValue) : null;
     }
   }
 
-  const cachedHandleArrowKeyPress = useCallback(handleArrowKeyPress, [setCurrentImage])
+  const cachedHandleArrowKeyPress = useCallback(handleArrowKeyPress, [isInLightBox])
 
   function renderThumbnails(thumbnailsArray) {
     return thumbnailsArray.map(thumbnail => {

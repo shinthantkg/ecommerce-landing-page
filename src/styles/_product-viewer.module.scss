@@ -63,6 +63,10 @@
   &__close-btn {
     cursor: pointer;
     transform: translateX(13.4375rem) translateY(-1.5625rem);
+
+    &:hover {
+      filter: brightness(2.5);
+    }
   }
 
   &__btn {

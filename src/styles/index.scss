@@ -25,6 +25,10 @@ a:visited {
   text-decoration: none;
 }
 
+#root {
+  height: 100%;
+}
+
 // Helper Classes
 .flex {
   display: flex;
@@ -76,4 +80,12 @@ a:visited {
 
 .no-select {
   user-select: none;
+}
+
+.hover-darken {
+  transition: filter 0.2s ease-in;
+
+  &:hover {
+    filter: brightness(70%);
+  }
 }

@@ -1,0 +1,27 @@
+@import "variables";
+
+.product-viewer {
+  width: 100%;
+
+  &__btn {
+    background-color: $white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    width: 3.4375rem;
+    height: 3.4375rem;
+
+    &--prev {
+      transform: translateX(-95vw) translateY(40vw);
+    }
+
+    &--next {
+      transform: translateX(-20vw) translateY(40vw);
+
+      @media (min-width: 450px) {
+        transform: translateX(-12vw) translateY(40vw);
+      }
+    }
+  }
+}

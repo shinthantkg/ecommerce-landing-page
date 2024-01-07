@@ -1,13 +1,23 @@
 @import "variables";
 
 .main {
+  height: 100%;
   padding: 1% 15%;
+
+  @media (max-width: 62.5rem) {
+    padding: 0;
+  }
 }
 
 .product {
   font-family: $font;
   margin-left: 3rem;
   padding: 6% 6% 9% 4%;
+
+  @media (max-width: 62.5rem) {
+    margin-left: 0;
+    padding: 6%;
+  }
 
   &__company {
     color: $orange;
@@ -22,6 +32,12 @@
     font-size: $fs-lg;
     margin: 1.125rem 0 1.25rem;
     width: 25rem;
+
+    @media (max-width: 62.5rem) {
+      font-size: $fs-lg-mobile;
+      margin-bottom: 0;
+      width: 100%;
+    }
   }
 
   &__desc {
@@ -29,6 +45,19 @@
     line-height: 1.5625rem;
     margin-bottom: 2.5rem;
     width: 26.875rem;
+
+    @media (max-width: 62.5rem) {
+      width: 90%;
+      margin-top: 1.875rem;
+    }
+
+    @media (max-width: 23.125rem) {
+      width: 15.625rem;
+    }
+  }
+
+  &__pricing {
+    margin-bottom: 2.5rem;
   }
 
   &__price {
@@ -50,7 +79,7 @@
     color: $grayish-blue;
     font-size: $fs-sm;
     font-weight: $fw-bold;
-    margin: 0.625rem 0 2.5rem;
+    margin-top: 0.625rem;
   }
 
   &__add-btn {
@@ -63,8 +92,12 @@
     font-family: $font;
     font-size: $fs-sm;
     font-weight: $fw-bold;
-    padding: 1.25rem 4.6875rem;
+    padding: 1.25rem 3rem;
     transition: opacity 0.2s ease-in;
+
+    @media (max-width: 62.5rem) {
+      margin-top: 1rem;
+    }
 
     &-icon {
       filter: brightness(2.5);
@@ -92,6 +125,10 @@
     border-radius: 10px;
     margin-right: 1.25rem;
     padding: 1.25rem 0.9375rem;
+
+    @media (max-width: 62.5rem) {
+      margin-right: 0;
+    }
 
     &__remove {
       margin-right: 3.125rem;

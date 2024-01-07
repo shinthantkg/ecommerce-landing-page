@@ -4,6 +4,38 @@
   position: absolute;
   right: 5.625em;
   top: 6.25em;
+  z-index: 1000;
+
+  &__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 1.875em;
+    padding: 0.625em 0;
+
+    @media (max-width: 23.125rem) {
+      margin-right: 0.625rem;
+    }
+
+    &--active {
+      filter: brightness(30%);
+    }
+
+    &:focus {
+      outline: 2px solid #007BFF;
+      outline-offset: 4px;
+    }
+  }
+
+  &__amount {
+    background-color: $orange;
+    border-radius: 1.875rem;
+    color: $white;
+    padding: 0.0625rem 0.625rem;
+    position: absolute;
+    transform: translateX(0.625rem) translateY(-0.625rem);  
+    z-index: 1;
+  }
 
   &__label,
   &__items {

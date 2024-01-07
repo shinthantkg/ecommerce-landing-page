@@ -69,35 +69,6 @@
     }
   }
 
-  &__cart {
-    &-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-right: 1.875em;
-      padding: 0.625em 0;
-  
-      &--active {
-        filter: brightness(30%);
-      }
-
-      &:focus {
-        outline: 2px solid #007BFF;
-        outline-offset: 4px;
-      }
-    }
-
-    &-amount {
-      background-color: $orange;
-      border-radius: 1.875rem;
-      color: $white;
-      padding: 0.0625rem 0.625rem;
-      position: absolute;
-      transform: translateX(0.625rem) translateY(-0.625rem);  
-      z-index: 1;
-    }
-  }
-
   &__profile {
     width: 3.4375em;
     height: 3.4375em;
@@ -106,6 +77,11 @@
       border: 3px solid orange;
       border-radius: 100%;
       cursor: pointer;
+    }
+
+    @media (max-width: 23.125rem) {
+      width: 2.8125rem;
+      height: 2.8125rem;
     }
   }
 }

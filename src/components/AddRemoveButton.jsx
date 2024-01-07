@@ -8,13 +8,17 @@ export default function AddRemoveButton({ selectedItems, onSelect, onUnselect, o
     return (
         <div className="flex">
             <div className="item-count-btn flex flex-jc-c flex-ai-c">
-                <img className="item-count-btn__remove" onClick={onUnselect} src={minusIcon} alt="Remove item from cart."/>
+                <button className="item-count-btn__remove">
+                    <img onClick={onUnselect} src={minusIcon} alt="Remove item from cart." />
+                </button>
                 <span className="item-count">{selectedItems ? selectedItems : 0}</span>
-                <img className="item-count-btn__add" onClick={onSelect}
-                 src={plusIcon} alt="Add item from cart."/>
+                <button className="item-count-btn__add">
+                    <img onClick={onSelect}
+                        src={plusIcon} alt="Add item from cart." />
+                </button>
             </div>
 
-            <button className="product__add-btn flex flex-ai-c" onClick={onAddToCart}><img className="product__add-btn-icon" src={cartIcon} alt="Add to cart."/> Add to cart</button>
+            <button className="product__add-btn flex flex-ai-c" onClick={onAddToCart}><img className="product__add-btn-icon" src={cartIcon} alt="Add to cart." /> Add to cart</button>
         </div>
     );
 }

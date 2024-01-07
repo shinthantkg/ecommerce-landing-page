@@ -30,12 +30,12 @@ export default function Navbar() {
             <img src={menuIcon} alt="Menu" />
           </button>
           <a href="/">
-            <img src={logo} alt="Sneakers Logo" />
+            <img className="no-select" src={logo} alt="Sneakers Logo" />
           </a>
           <ul className="navbar__list hidden--mobile">
             {navLinks.map((navLink) => (
               <li
-                className={`navbar__item ${navLink.id === activeLink && "navbar__item--active"}`}
+                className={`navbar__item no-select ${navLink.id === activeLink && "navbar__item--active"}`}
                 key={navLink.id}
                 onClick={() => setActiveLink(navLink.id)}
                 aria-current={navLink.id === activeLink}
@@ -52,7 +52,7 @@ export default function Navbar() {
             <Cart />
           </div>
 
-          <img className="navbar__profile" src={avatar} alt="Profile Picture" />
+          <img className="navbar__profile no-select" src={avatar} alt="Profile Picture" />
         </div>
       </nav>
 

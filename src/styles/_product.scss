@@ -98,7 +98,10 @@
     }
 
     &__remove,
-    &add {
+    &__add {
+      background: none;
+      border: none;
+      padding: 0;
       transition: opacity 0.2s ease-in;
       user-select: none;
     }

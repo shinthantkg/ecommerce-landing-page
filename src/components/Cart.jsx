@@ -21,7 +21,7 @@ export default function Cart() {
     <>
       <button
         ref={cartButtonRef}
-        className={`navbar__cart-btn ${cartButtonToggle ? "navbar__cart-btn--active" : ""}`}
+        className={`navbar__cart-btn no-select ${cartButtonToggle ? "navbar__cart-btn--active" : ""}`}
         type="button"
         aria-label={`Shopping Cart, ${items} items in cart`}
         aria-haspopup="dialog"

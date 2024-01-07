@@ -44,13 +44,13 @@ export default function ProductViewer() {
   function renderThumbnails(thumbnailsArray) {
     return thumbnailsArray.map(thumbnail => {
       return (
-        <img
-          key={thumbnail.id}
-          className={`image image--thumbnail ${thumbnail.id === currentImage ? "image--thumbnail-active" : ""}`}
-          onClick={() => setCurrentImage(thumbnail.id)}
-          src={thumbnail.src}
-          alt="Fall Limited Edition Sneakers Thumbnail"
-        />
+        <button key={thumbnail.id} className="thumbnail-btn" onClick={() => setCurrentImage(thumbnail.id)}>
+          <img
+            className={`image image--thumbnail ${thumbnail.id === currentImage ? "image--thumbnail-active" : ""}`}
+            src={thumbnail.src}
+            alt="Fall Limited Edition Sneakers Thumbnail"
+          />
+        </button>
       );
     });
   }
@@ -89,12 +89,10 @@ export default function ProductViewer() {
 
   return (
     <>
+      {renderProduct()}
       {isInLightBox ?
-        <>
-          {renderProduct()}
-          {renderLightBox()}
-        </>
-        : renderProduct()
+        renderLightBox()
+        : null
       }
     </>
   );

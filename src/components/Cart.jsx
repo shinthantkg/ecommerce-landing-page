@@ -21,21 +21,25 @@ export default function Cart() {
     <>
       <button
         ref={cartButtonRef}
-        className={`navbar__cart-btn no-select ${cartButtonToggle ? "navbar__cart-btn--active" : ""}`}
+        className="navbar__cart-btn no-select"
         type="button"
         aria-label={`Shopping Cart, ${items} items in cart`}
         aria-haspopup="dialog"
         aria-expanded={cartButtonToggle}
         onClick={() => setCartButtonToggle((prev) => !prev)}
       >
-        <img src={cartIcon} alt="Shopping Cart" />
+        {items > 0 ?
+          <span className={`navbar__cart-amount`}>{items}</span>
+          : null
+        }
+        <img className={cartButtonToggle ? "navbar__cart-btn--active" : ""} src={cartIcon} alt="Shopping Cart" />
       </button>
       {cartButtonToggle ? (
         <div
           className="cart"
           role="dialog"
           aria-labelledby="cartLabel"
-          aria-modal="true" 
+          aria-modal="true"
           tabIndex="-1"
           ref={cartContainerRef}
         >

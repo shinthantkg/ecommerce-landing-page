@@ -57,15 +57,27 @@
     }
   }
 
-  &__cart-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-right: 1.875em;
-    padding: 0.625em 0;
+  &__cart {
+    &-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 1.875em;
+      padding: 0.625em 0;
+  
+      &--active {
+        filter: brightness(30%);
+      }
+    }
 
-    &--active {
-      filter: brightness(30%);
+    &-amount {
+      background-color: $orange;
+      border-radius: 1.875rem;
+      color: $white;
+      padding: 0.0625rem 0.625rem;
+      position: absolute;
+      transform: translateX(0.625rem) translateY(-0.625rem);  
+      z-index: 1;
     }
   }
 

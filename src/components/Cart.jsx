@@ -35,7 +35,7 @@ export default function Cart() {
           className="cart"
           role="dialog"
           aria-labelledby="cartLabel"
-          aria-modal="true"
+          aria-modal="true" 
           tabIndex="-1"
           ref={cartContainerRef}
         >

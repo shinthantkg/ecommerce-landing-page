@@ -104,6 +104,10 @@
       padding: 0;
       transition: opacity 0.2s ease-in;
       user-select: none;
+
+      img {
+        cursor: pointer;
+      }
     }
 
     &__remove:hover,

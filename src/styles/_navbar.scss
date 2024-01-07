@@ -23,6 +23,13 @@
 }
 
 .navbar {
+  &__logo {
+    &:focus {
+      outline: 2px solid #007BFF;
+      outline-offset: 4px;
+    }
+  }
+
   &__list {
     padding-inline-start: 0;
   }
@@ -55,6 +62,11 @@
         background-color: $orange;
       }
     }
+
+    &:focus {
+      outline: 2px solid #007BFF;
+      outline-offset: 4px;
+    }
   }
 
   &__cart {
@@ -67,6 +79,11 @@
   
       &--active {
         filter: brightness(30%);
+      }
+
+      &:focus {
+        outline: 2px solid #007BFF;
+        outline-offset: 4px;
       }
     }
 

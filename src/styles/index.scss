@@ -59,6 +59,8 @@ a:visited {
 }
 
 .hidden {
+  display: none;
+
   &--mobile {
     @media (max-width: 62.4375em) {
       display: none;

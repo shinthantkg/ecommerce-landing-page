@@ -24,13 +24,13 @@ export default function MobileNav() {
   return (
     <>
       {navToggle ? (
-        <div
+        <nav
           className="mobile-nav-container hidden--desktop"
           role="dialog"
           aria-labelledby="mobileNavLabel"
           aria-modal="true"
           ref={navContainerRef}
-          tabIndex="-1"
+          tabIndex={navToggle ? "0" : "-1"}
         >
           <div className="mobile-nav-container--visible flex flex-fd-c">
             <button
@@ -52,7 +52,7 @@ export default function MobileNav() {
               </ul>
             </nav>
           </div>
-        </div>
+        </nav>
       ) : null}
     </>
   );

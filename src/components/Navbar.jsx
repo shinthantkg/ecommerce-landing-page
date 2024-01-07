@@ -29,9 +29,11 @@ export default function Navbar() {
           >
             <img src={menuIcon} alt="Menu" />
           </button>
-          <a href="/">
+
+          <a className="navbar__logo" href="/">
             <img className="no-select" src={logo} alt="Sneakers Logo" />
           </a>
+
           <ul className="navbar__list hidden--mobile">
             {navLinks.map((navLink) => (
               <li
@@ -51,7 +53,6 @@ export default function Navbar() {
           <div>
             <Cart />
           </div>
-
           <img className="navbar__profile no-select" src={avatar} alt="Profile Picture" />
         </div>
       </nav>

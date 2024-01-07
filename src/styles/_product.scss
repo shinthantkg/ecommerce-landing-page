@@ -74,6 +74,11 @@
     &:hover {
       opacity: 70%;
     }
+
+    &:focus {
+      outline: 2px solid #007BFF;
+      outline-offset: 4px;
+    }
   }
 }
 
@@ -112,6 +117,12 @@
     &__remove:hover,
     &__add:hover {
       opacity: 70%;
-    } 
+    }
+    
+    &__remove:focus,
+    &__add:focus {
+      outline: 2px solid #007BFF;
+      outline-offset: 4px;
+    }
   }
 }

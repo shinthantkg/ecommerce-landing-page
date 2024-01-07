@@ -5,7 +5,7 @@ const CartContext = createContext();
 export default CartContext;
 
 export function CartContextProvider({ children }) {
-    const [items, setItems] = useState(5);
+    const [items, setItems] = useState(0);
     const [cartButtonToggle, setCartButtonToggle] = useState(false);
 
     const value = {items, setItems, cartButtonToggle, setCartButtonToggle};

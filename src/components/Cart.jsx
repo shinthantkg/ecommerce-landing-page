@@ -40,9 +40,9 @@ export default function Cart() {
           ref={cartContainerRef}
         >
           <div className="cart__label">
-            <h2 className="cart__label-title" id="cartLabel">
+            <span className="cart__label-title" id="cartLabel">
               Cart
-            </h2>
+            </span>
           </div>
 
           {items === 0 ? (

@@ -1,0 +1,111 @@
+@import "variables";
+
+.main {
+  padding: 1% 15%;
+}
+
+.product {
+  font-family: $font;
+  margin-left: 3rem;
+  padding: 6% 6% 9% 4%;
+
+  &__company {
+    color: $orange;
+    font-size: $fs-xsm;
+    font-weight: $fw-bold;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: $dark-blue;
+    font-size: $fs-lg;
+    margin: 1.125rem 0 1.25rem;
+    width: 25rem;
+  }
+
+  &__desc {
+    color: $dark-grayish-blue;
+    line-height: 1.5625rem;
+    margin-bottom: 2.5rem;
+    width: 26.875rem;
+  }
+
+  &__price {
+    color: $dark-blue;
+    font-size: $fs-med;
+    font-weight: $fw-bold;
+    margin-right: 0.9375rem;
+  }
+
+  &__discount {
+    background-color: $orange-accent;
+    border-radius: 0.5rem;
+    color: $orange;
+    font-weight: $fw-bold;
+    padding: 0.3125rem 0.625rem;
+  }
+
+  &__original-price {
+    color: $grayish-blue;
+    font-size: $fs-sm;
+    font-weight: $fw-bold;
+    margin: 0.625rem 0 2.5rem;
+  }
+
+  &__add-btn {
+    background-color: $orange;
+    border: none;
+    border-radius: 0.625rem;
+    box-shadow: hsla(26, 90%, 100%, 100%) 0 1.875rem 3.75rem -0.75rem, hsl(26, 100%, 55%) 0 1.125rem 2.25rem -1.125rem;
+    color: $white;
+    cursor: pointer;
+    font-family: $font;
+    font-size: $fs-sm;
+    font-weight: $fw-bold;
+    padding: 1.25rem 4.6875rem;
+    transition: opacity 0.2s ease-in;
+
+    &-icon {
+      filter: brightness(2.5);
+      margin-right: 0.9375rem;
+    }
+
+    &:hover {
+      opacity: 70%;
+    }
+  }
+}
+
+.item-count {
+  color: $dark-blue;
+  font-weight: $fw-bold;
+  user-select: none;
+
+  &-btn {
+    background-color: $light-grayish-blue;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 1.25rem;
+    padding: 1.25rem 0.9375rem;
+
+    &__remove {
+      margin-right: 3.125rem;
+    }
+
+    &__add {
+      margin-left: 3.125rem;
+    }
+
+    &__remove,
+    &add {
+      transition: opacity 0.2s ease-in;
+      user-select: none;
+    }
+
+    &__remove:hover,
+    &__add:hover {
+      opacity: 70%;
+    }
+  }
+}

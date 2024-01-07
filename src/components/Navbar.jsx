@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import NavContext from "../contexts/NavContext.jsx";
-import { CartContextProvider, CartContextConsumer } from "../contexts/CartContext.jsx";
+import NavContext from "../contexts/NavContext.jsx"
 import Cart from "./Cart.jsx";
 import "../styles/_navbar.scss";
 import logo from "../images/logo.svg";
@@ -50,13 +49,7 @@ export default function Navbar() {
 
         <div className="flex flex-ai-c">
           <div>
-            <CartContextProvider>
-              <CartContextConsumer>
-                {() => {
-                  return <Cart />;
-                }}
-              </CartContextConsumer>
-            </CartContextProvider>
+            <Cart />
           </div>
 
           <img className="navbar__profile" src={avatar} alt="Profile Picture" />
